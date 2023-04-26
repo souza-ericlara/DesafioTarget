@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Fibonacci {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Informe um número: ");
+        int num = scanner.nextInt(); //Recebe um número informado pelo usuário
+
+        int a = 0;
+        int b = 1;
+        int fib = 0;
+
+        while (fib < num) { //Calcula a sequencia de Fibonacci até que o "fib" seja igual ou maior ao número informado.
+            fib = a + b;
+            a = b;
+            b = fib;
+        }
+
+        if (fib == num) { //Verifica se o número informado pertence a sequência de Fibonacci e retorna a mensagem.
+            System.out.println(num + " pertence à sequência de Fibonacci.");
+        } else {
+            System.out.println(num + " não pertence à sequência de Fibonacci.");
+        }
+    }
+}
