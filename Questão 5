@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class InverteString {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Digite uma string: ");
+        String entrada = sc.nextLine(); //Recebe uma string do usuário
+        String invertida = ""; //Variável vazia utilizada para armazenar a string invertida
+
+        for (int i = entrada.length() - 1; i >= 0; i--) { //Percorre a string informada pelo usuário de trás para frente e insere os caracteres na String vazia
+            invertida += entrada.charAt(i);
+        }
+
+        System.out.println("A string invertida é: " + invertida);
+        sc.close();
+    }
+}
